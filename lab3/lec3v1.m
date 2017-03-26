@@ -5,14 +5,16 @@ Fs = 32000;
 ts = 0 : 1/Fs : 0.001 - 1/Fs;
 N = length(ts);
 
-a2 =0.075;
+a2 = 0.075;
 f2 = 9500;
 %%%%%%%%%%%%%%%%%%%%%%1
 
 x1 = sin(2*pi*8000*ts)+a2*sin(2*pi*f2*ts);   %signal s pomehoi a2 f2
-
 X1 = abs(fft(x1));                           %bistroe preobrazovanie Fyrie
 
+plot(ts,x1); grid on;
+
+figure;
 subplot (3,2,1);
 stem(X1); grid on
 
@@ -25,7 +27,6 @@ stem(X1w); grid on
 %%%%%%%%%%%%%%%%%%%%%%%%2
 
 x2 = sin(2*pi*8500*ts)+a2*sin(2*pi*f2*ts);   %signal s pomehoi a2 f2
-
 X2 = abs(fft(x2));                           %bistroe preobrazovanie Fyrie
 
 subplot (3,2,3);
@@ -40,7 +41,6 @@ stem(X2w); grid on
 %%%%%%%%%%%%%%%%%%%%%%%%3
 
 x3 = sin(2*pi*8750*ts)+a2*sin(2*pi*f2*ts);   %signal s pomehoi a2 f2
-
 X3 = abs(fft(x3));                           %bistroe preobrazovanie Fyrie
 
 subplot (3,2,5);
