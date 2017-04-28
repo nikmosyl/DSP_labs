@@ -16,8 +16,8 @@ y3 = sin(2*pi*f*t3);
 
 plot(t1,y1,'-r',t2,y2,'-g',t3,y3,'-b')
 grid on
-xlabel('Время');
-ylabel('Амплитуда');
-title('Сигнал');
+xlabel('чТЕНС');
+ylabel('бНРМЙФХДЩ');
+title('уЙЗОБМ');
 
 
