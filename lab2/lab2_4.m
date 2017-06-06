@@ -18,8 +18,13 @@ s2=s2';
 F=fft(s2);
 Fn=2*abs(F)/N;
 
+f = zeros(N,1);
+for i = 1 : 100
+    f(i) = (i-1)*fs/N;
+end
+
 figure;
 for k=1:N
     subplot(4,4,k)
-    stem(Fn(:,k)); grid on;
+    stem(f,Fn(:,k)); grid on;
 end
